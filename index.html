@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hyro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="lib/codemirror/codemirror.js"></script>
+    
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="lib/codemirror/codemirror.css">
+    <link rel="stylesheet" href="lib/jquery/jquery.alerts.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="lib/jquery/jquery.alerts.js"></script>
+    <script src="lib/jquery/jquery.hotkeys.js"></script>
+    <script src="lib/codemirror/xml.js"></script>
+    <script src="lib/codemirror/htmlmixed.js"></script>
+    <script src="lib/codemirror/javascript.js"></script>
+    <script src="lib/codemirror/css.js"></script>
+    <script src="js/hyro.js">
+	
+	</script>
+  </head>
+  <body>
+    <div id="rename_prompt" title="Basic dialog" style="display:none;">
+    <p></p>
+    </div>
+    <input style="display:none;" id="openDialog" type="file" multiple/>
+    <input style="display:none;" id="saveDialog" type="file" nwsaveas />
+    <div id="wrapper">
+      <div id="file-wrapper">
+        <div id="file-nav">
+        </div>
+      </div>
+      <div id="box-wrapper">
+        <div id="default" class="text-box">
+        </div>
+
+        <div id="view-box" class="text-box">
+        <iframe nwdisable style="height:99%;width:100%;border:0;" id="code-view"></iframe>
+        </div>
+        <div id="view-file-name">*HTML file not found*</div>
+        <div id="console-box"></div>
+      </div>
+    </div>
+    <code style='display:none;' id="code-placeholder"></code>
+    <script type='text/javascript' id="box-gen">
+    $(document).ready(function(e){
+      appendFile("<!DOCTYPE html>\n<html>\n<head>\n\n</head>\n<body>\n\n</body>\n</html>", "/untitled.html", false);
+      $(".file-tab").trigger("click");
+    })
+    </script>
+  </body>
+</html>
