@@ -1,52 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Hyro</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="lib/codemirror/codemirror.js"></script>
-    
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-    <link rel="stylesheet" href="lib/codemirror/codemirror.css">
-    <link rel="stylesheet" href="lib/jquery/jquery.alerts.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script src="lib/jquery/jquery.alerts.js"></script>
-    <script src="lib/jquery/jquery.hotkeys.js"></script>
-    <script src="lib/codemirror/xml.js"></script>
-    <script src="lib/codemirror/htmlmixed.js"></script>
-    <script src="lib/codemirror/javascript.js"></script>
-    <script src="lib/codemirror/css.js"></script>
-    <script src="js/hyro.js">
-	
-	</script>
-  </head>
-  <body>
-    <div id="rename_prompt" title="Basic dialog" style="display:none;">
-    <p></p>
-    </div>
-    <input style="display:none;" id="openDialog" type="file" multiple/>
-    <input style="display:none;" id="saveDialog" type="file" nwsaveas />
-    <div id="wrapper">
-      <div id="file-wrapper">
-        <div id="file-nav">
-        </div>
-      </div>
-      <div id="box-wrapper">
-        <div id="default" class="text-box">
-        </div>
 
-        <div id="view-box" class="text-box">
-        <iframe nwdisable style="height:99%;width:100%;border:0;" id="code-view"></iframe>
-        </div>
-        <div id="view-file-name">*HTML file not found*</div>
-        <div id="console-box"></div>
-      </div>
+<head>
+<title>Hyro</title>
+<meta name="Hyro - cross-platform, real-time HTML5 editor" content="Hyro is a live HTML editor for creating webpages on your desktop and in real-time.">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta name="keywords" content="HTML, HTML5, live, real-time, editor, desktop, cross-platform, javascript, css, jawerty, Jared, Wright">
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+<div id="wrapper">
+
+<div id="content">
+  <div id="left_widget">
+    <a href="http://jawerty.github.io">Jared Wright @jawerty</a>
+
+  </div>
+
+  <div id="right_widget">
+    <a href="https://github.com/jawerty/Hyro"><i class="icon-github icon-3x"></i></a>&nbsp;&nbsp;
+    <a href="https://twitter.com/jawerty"><i class="icon-twitter icon-3x"></i></a>
+  </div>
+
+  <div id="title">
+    <img src="images/Hyro_title.png">
+    </img>
+    <br>
+    <br>
+    <label id="subtitle">A real-time HTML5 editor</label>
+    <br>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Hyro - a real-time HTML5 editor - is awesome" data-via="Jawerty" data-related="Jawerty" data-hashtags="HyroEditor">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <a href="https://twitter.com/Jawerty" class="twitter-follow-button" data-show-count="false">Follow @Jawerty</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+  <div class="panel" id="main">
+    <img class="screenshot" src="images/2.png">
+    </img>
+  </div>
+
+  <div id="download">
+    <div id="download_message">
+      <p>Click your <span style="color:#E36D6D">Platform</span> to Download</p>
     </div>
-    <code style='display:none;' id="code-placeholder"></code>
-    <script type='text/javascript' id="box-gen">
-    $(document).ready(function(e){
-      appendFile("<!DOCTYPE html>\n<html>\n<head>\n\n</head>\n<body>\n\n</body>\n</html>", "/untitled.html", false);
-      $(".file-tab").trigger("click");
-    })
-    </script>
-  </body>
+
+    <div class="panel" id="download_icons">
+      <a href="apps/Hyro-0.0.2.msi"><i class="icon-windows icon-5x"></i></a>
+      <a href="apps/Hyro-0.0.2.dmg"><i class="icon-apple icon-5x"></i></a>
+      <a href="apps/Hyro-0.0.2_i386.deb"><i class="icon-linux icon-5x"></i></a>
+    </div>
+  </div>
+
+  <div id="usage">
+    <div id="left_usage">
+      <li><p><span style="color: #E36D6D;">Desktop</span> HTML5 editor with a live HTML viewer.</p></li>
+      <br>
+      <li><p>Can be used for <span style="color: #E36D6D;">Javascript</span> and <span style="color: #E36D6D;">CSS</span> coding.</p></li>
+      <br>
+      <li><p>Utilizes the incredible <span style="color: #E36D6D;">Codemirror</span> text-editor for highlighting and indentation.</p></li>
+    </div>
+    <div id="right_usage">
+      <li><p><span style="color: #E36D6D;">Lightweight and easy</span> to setup. Anyone can use it.<p></li>
+      <br>
+      <li><p><span style="color: #E36D6D;">Customizable UI</span>. You can change the primary UI color at any time. (more customization coming soon)</p></li>
+      <br>
+      <li><p>Compatible with all platforms: <span style="color: #E36D6D;">Windows</span>, <span style="color: #E36D6D;">Mac OSX</span>, and <span style="color: #E36D6D;">Linux</span></p></li>
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <br>
+  Copyright &copy; 2013 Jared Wright
+</div>
+
+</div>
+</body>
 </html>

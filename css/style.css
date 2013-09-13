@@ -1,152 +1,137 @@
-@font-face {
-	font-family: "inconsolata";
-	src: url("../Inconsolata.otf");	
-}
-
 * {
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;  
-	font-family: "inconsolata";
-  	font-size: 15px;
-}
-
-label {
-	display: none;
+	color: #555;
+	font-family: Helvetica;
 }
 
 html, body {
-	height: 99%;
-	min-height: 100%;
+
 }
 
-div::-webkit-scrollbar {
-	width:9px;
-	height:9px;
-	background-color:#aaa;
+body {
+	background: #fffcfc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fffcfc 0%, #f4f4f4 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fffcfc), color-stop(100%,#f4f4f4)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fffcfc 0%,#f4f4f4 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fffcfc 0%,#f4f4f4 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fffcfc 0%,#f4f4f4 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fffcfc 0%,#f4f4f4 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffcfc', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
 }
 
-
-div::-webkit-scrollbar-track-piece {
-	background-color:#fff;
-	-webkit-border-radius:0;
-}
-
-div::-webkit-scrollbar-thumb:vertical {
-	height:50px;
-	background-color:#777;
-}
-
-div::-webkit-scrollbar-thumb:horizontal {
-	width:50px;
-	background-color:#777;
-}
-
-#wrapper {
-	margin: -8px;
-	height: 100%;
-	min-height: 100%;
-	overflow: auto;
-}
-
-.file-tab {
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	background-color: #fff;
-	padding: 5px 5px 0px 5px;
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-top: 5px;
-	border-bottom: 1% solid #fff;
+i[class^="icon-"]:before {
 	display: inline-block;
-	opacity: 1;
-	cursor: pointer;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
+	text-decoration: none;
 }
 
-.file-tab:hover {
-	/*color: #ff4d4d;*/
+i[class^="icon-"]:hover {
 	color: #E36D6D;
 }
 
-#file-nav {
-	overflow-x: scroll;
-	overflow-y: hidden;
-	width: auto;
-    min-height: 28px;
-    white-space: nowrap;	
-    padding-left: 28px;
-	background-color: #E36D6D;
-	border-bottom: 1px solid #ccc;
-	position: relative;
-	opacity: 1;
-	color: #111;
+a {
+	color: #555;
 }
 
-#file-wrapper {
+a:hover {
+	text-decoration: none;
+	color: #E36D6D;
+}
+
+li {
+	list-style-type: none;
 
 }
 
-.text-box {
-	float:left;
-	overflow: auto;
-	height: 100%;
-	width: 50%;
-	background-color: #ffffff;
+li p {
+	margin-top: 10px;
 }
 
-#box-wrapper {
-	height: calc(100% - 41px);
-	max-height: 100%;
+.screenshot {
+	-moz-box-shadow: 0px 0px 12px 1px #333;
+	-webkit-box-shadow: 0px 0px 12px 1px #333;
+	box-shadow: 0px 0px 12px 1px #333;
+	width: 650px;height:450px;
 }
 
-#html-box {
-	background-color: #ffffff;
-	display:none;
+#wrapper {
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+	height: inherit;
+	width: inherit;
+	padding: 60px;
 }
 
-#css-box {
-	background-color: #ffffff;
-	display:none;
-}
-
-#js-box {
-	background-color: #ffffff;
-	display:none;
-}
-
-#view-box {
-	background-color: white;
-	border-left: 1px solid #ccc;
-}
-
-#code-box {
-	padding:0;
-	margin:0;
-}
-#view-file-name {
-	background-color: #eee;
-	padding: 3px;
-	color: #777;
-	border: 1px solid #777;
-	border-radius: 3px;
-	right: 1%;
+#left_widget {
+	left: 3%;
+	top: 3%;
 	position: fixed;
-	z-index: 100;
-	cursor: default;
-	margin-top: 1%;
-	opacity: 0.2;
-	transition: opacity 0.5s;
 }
 
-#view-file-name:hover {
-	opacity:1;
+#right_widget {
+	right: 3%;
+	top: 3%;
+	position:fixed;
 }
 
-#console-box {
-	display:none;
-	background-color: #404040;
-	padding: 10px;
-	color: #fff;
+#content {
+	height: inherit;
+	width: inherit;
+}
+ 
+#title {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+#subtitle {
+	font-size: 120%;
+}
+
+#main {
+	text-align: center;
+}
+
+#download {
+	margin-top: 60px;
+	text-align: center;
+}
+
+#download_icons {
+	margin-top: 60px;
+	letter-spacing: 50px;
+	margin-left: 50px;
+
+}
+
+#download_icons i {
+	font-size:160px;
+}
+
+#download_message {
+	font-size: 140%;
+	margin-top: 60px;
+	text-align: center;
+}
+
+#footer {
+	text-align: center;
+}
+
+#usage {
+	padding: 60px;
+	width: 850px;
+	margin: 0 auto;
+	font-size: 120%;
+	height: 200px;
+}
+
+#left_usage {
+	float:left;
+	width: 400px;
+}
+
+#right_usage {
+	float:right;
+	width: 400px;
+
 }
