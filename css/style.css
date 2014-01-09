@@ -1,0 +1,152 @@
+@font-face {
+	font-family: "inconsolata";
+	src: url("../Inconsolata.otf");	
+}
+
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;  
+	font-family: "inconsolata";
+  	font-size: 15px;
+}
+
+label {
+	display: none;
+}
+
+html, body {
+	height: 99%;
+	min-height: 100%;
+}
+
+div::-webkit-scrollbar {
+	width:9px;
+	height:9px;
+	background-color:#aaa;
+}
+
+
+div::-webkit-scrollbar-track-piece {
+	background-color:#fff;
+	-webkit-border-radius:0;
+}
+
+div::-webkit-scrollbar-thumb:vertical {
+	height:50px;
+	background-color:#777;
+}
+
+div::-webkit-scrollbar-thumb:horizontal {
+	width:50px;
+	background-color:#777;
+}
+
+#wrapper {
+	margin: -8px;
+	height: 100%;
+	min-height: 100%;
+	overflow: auto;
+}
+
+.file-tab {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: #fff;
+	padding: 5px 5px 0px 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 5px;
+	border-bottom: 1% solid #fff;
+	display: inline-block;
+	opacity: 1;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+.file-tab:hover {
+	/*color: #ff4d4d;*/
+	color: #E36D6D;
+}
+
+#file-nav {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	width: auto;
+    min-height: 28px;
+    white-space: nowrap;	
+    padding-left: 28px;
+	background-color: #E36D6D;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+	opacity: 1;
+	color: #111;
+}
+
+#file-wrapper {
+
+}
+
+.text-box {
+	float:left;
+	overflow: auto;
+	height: 100%;
+	width: 50%;
+	background-color: #ffffff;
+}
+
+#box-wrapper {
+	height: calc(100% - 41px);
+	max-height: 100%;
+}
+
+#html-box {
+	background-color: #ffffff;
+	display:none;
+}
+
+#css-box {
+	background-color: #ffffff;
+	display:none;
+}
+
+#js-box {
+	background-color: #ffffff;
+	display:none;
+}
+
+#view-box {
+	background-color: white;
+	border-left: 1px solid #ccc;
+}
+
+#code-box {
+	padding:0;
+	margin:0;
+}
+#view-file-name {
+	background-color: #eee;
+	padding: 3px;
+	color: #777;
+	border: 1px solid #777;
+	border-radius: 3px;
+	right: 1%;
+	position: fixed;
+	z-index: 100;
+	cursor: default;
+	margin-top: 1%;
+	opacity: 0.2;
+	transition: opacity 0.5s;
+}
+
+#view-file-name:hover {
+	opacity:1;
+}
+
+#console-box {
+	display:none;
+	background-color: #404040;
+	padding: 10px;
+	color: #fff;
+}
