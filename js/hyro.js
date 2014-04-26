@@ -110,6 +110,7 @@ function appendFile(text, path, opened) {
 
 $(document).ready(function(){	
 	(function init() {
+		// tell when the view is initiated
 		console.log('initialized');
 	})();
 
