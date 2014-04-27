@@ -251,7 +251,7 @@ $(document).ready(function(){
 		var viewSubmenu = new gui.Menu();
 
 		viewSubmenu.append(new gui.MenuItem({ 
-			label: 'Change Color',
+			label: 'Change Color Theme',
 			click: function() {
 				jPrompt("(HEX only)\ndefault: "+default_color , "", 'Change UI Color', function(r) {
 				    if(r) {
