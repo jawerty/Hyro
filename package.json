@@ -2,7 +2,7 @@
   "main": "index.html",
   "name": "hyro",
   "description": "Lightweight real-time HTML5 editor",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "keywords": [ "hyro", "html", "html5", "editor", "live", "real-time", "minimalist", "lightweight" ],
   "window": {
     "title": "Hyro",
