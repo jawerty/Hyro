@@ -3,7 +3,16 @@
   "name": "hyro",
   "description": "Lightweight real-time HTML5 editor",
   "version": "0.0.4",
-  "keywords": [ "hyro", "html", "html5", "editor", "live", "real-time", "minimalist", "lightweight" ],
+  "keywords": [
+    "hyro",
+    "html",
+    "html5",
+    "editor",
+    "live",
+    "real-time",
+    "minimalist",
+    "lightweight"
+  ],
   "window": {
     "title": "Hyro",
     "toolbar": false,
@@ -18,19 +27,30 @@
   "webkit": {
     "plugin": true
   },
-  "maintainers":[{
-   "name": "Jared Wright",
-   "email": "jawerty210@gmail.com",
-   "web": "http://jawerty.github.io",
-   "feedback": "https://github.com/jawerty/Hyro/issues"
-  }],
-  "licenses": [{
-    "type": "MIT",
-    "url": "http://opensource.org/licenses/MIT"
-  }],
+  "maintainers": [
+    {
+      "name": "Jared Wright",
+      "email": "jawerty210@gmail.com",
+      "web": "http://jawerty.github.io",
+      "feedback": "https://github.com/jawerty/Hyro/issues"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
   "bugs": "https://github.com/jawerty/Hyro/issues",
-  "repositories": [{
-    "type": "git", 
-    "url": "git@github.com:jawerty/Hyro.git"
-  }]
+  "repository": [
+    {
+      "type": "git",
+      "url": "git@github.com:jawerty/Hyro.git"
+    }
+  ],
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-node-webkit-builder": "^0.1.21"
+  }
 }
