@@ -35,10 +35,16 @@ Thank you and happy hacking.
 # Development
 Hyro is built with node-webkit and jquery.
 
+### Building:
+````
+npm install
+grunt build
+```
+
 ### Todo 
 * Coderunner plug-ins built in.  
-* Build tool.
-* Improve linux distributions
+* ~~Build tool.~~
+* Improve linux distribution
 
 # LICENSE
 
