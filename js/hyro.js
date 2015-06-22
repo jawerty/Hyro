@@ -29,7 +29,6 @@ if (process.platform === 'darwin') {
 	baseDIR = process.env.HOME
 }
 
-console.log(baseDIR)
 function checkHex(value){
 	return /^#([A-Fa-f0-9]{3}$)|([A-Fa-f0-9]{6}$)/.test(value)
 }
@@ -110,7 +109,6 @@ function appendFile(text, path, opened) {
 
 $(document).ready(function(){	
 	(function init() {
-		// tell when the view is initiated
 		console.log('initialized');
 	})();
 
@@ -374,7 +372,7 @@ $(document).ready(function(){
 
 $(document).ready(function(e){
 
-	var mouse = { x: -1, y: -1 };
+    var mouse = { x: -1, y: -1 };
     $(document).mousemove(function(event) {
         mouse.x = event.pageX;
         mouse.y = event.pageY;
